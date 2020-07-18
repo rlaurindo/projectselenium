@@ -29,9 +29,9 @@ public class Signuptest {
         driver.findElement(By.id("u_0_t")).sendKeys("robsonl.laurindo@gmail.com");
 
         //Digit in the field the confirmation about email = "rxxxxxx@gmail.com" that contain id = u_0_w
-        driver.findElement(By.id("u_0_w")).sendKeys("robsonl.laurindo@gmail.com");
+        driver.findElement(By.id("u_0_w")).sendKeys("emailo@gmail.com");
 
-        //Digit a new password = "Rob1009@" that contain id = password_step_input
+        //Digit a new password = "teste123@" that contain id = password_step_input
         driver.findElement(By.id("password_step_input")).sendKeys("*******");
 
         //Select the value for day = 10 that contain id = day
