@@ -25,11 +25,11 @@ public class Signuptest {
         //Digit in the field LastName = "Laurindo" that contain name = lastname
         driver.findElement(By.name("lastname")).sendKeys("Laurindo");
 
-        //Digit in the field mobile or email = "robsonl.laurindo@gmail.com" that contain id = reg_email__
-        driver.findElement(By.id("u_0_t")).sendKeys("robsonl.laurindo@gmail.com");
+        //Digit in the field mobile or email = "email@gmail.com" that contain id = reg_email__
+        driver.findElement(By.id("u_0_t")).sendKeys("email@gmail.com");
 
-        //Digit in the field the confirmation about email = "rxxxxxx@gmail.com" that contain id = u_0_w
-        driver.findElement(By.id("u_0_w")).sendKeys("emailo@gmail.com");
+        //Digit in the field the confirmation about email = "email@gmail.com" that contain id = u_0_w
+        driver.findElement(By.id("u_0_w")).sendKeys("email@gmail.com");
 
         //Digit a new password = "teste123@" that contain id = password_step_input
         driver.findElement(By.id("password_step_input")).sendKeys("*******");
