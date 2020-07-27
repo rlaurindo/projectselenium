@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>FormTests.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+.s3 { color: #808080;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+FormTests.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">NewTests</span><span class="s0">;</span>
+
+<span class="s0">import </span><span class="s1">org.junit.Test</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">org.openqa.selenium.By</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">org.openqa.selenium.WebDriver</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">org.openqa.selenium.chrome.ChromeDriver</span><span class="s0">;</span>
+
+<span class="s0">public class </span><span class="s1">FormTests {</span>
+
+        <span class="s1">@Test</span>
+        <span class="s0">public void </span><span class="s1">testcreateusers(){</span>
+        <span class="s1">System.setProperty(</span><span class="s2">&quot;webdriver.chrome.driver&quot;</span><span class="s0">, </span><span class="s2">&quot;C:</span><span class="s0">\\</span><span class="s2">Users</span><span class="s0">\\</span><span class="s2">robso</span><span class="s0">\\</span><span class="s2">Drivers</span><span class="s0">\\</span><span class="s2">chromedriver.exe&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">WebDriver driver = </span><span class="s0">new </span><span class="s1">ChromeDriver()</span><span class="s0">;</span>
+
+
+        <span class="s3">//Creating the test cases to the project &quot;Automation with Batista&quot;.</span>
+        <span class="s3">// Scope: The purpose this project is to create an automation testing to easy the manuals activities.</span>
+
+         <span class="s3">//Open the browser = https://automacaocombatista.herokuapp.com/treinamento/home</span>
+          <span class="s1">driver.get(</span><span class="s2">&quot;https://automacaocombatista.herokuapp.com/treinamento/home&quot;</span><span class="s1">)</span><span class="s0">;</span>
+
+         <span class="s3">//Click on form that contain the field called &quot;Formulário&quot;</span>
+            <span class="s1">driver.findElement(By.linkText(</span><span class="s2">&quot;Formulário&quot;</span><span class="s1">)).click()</span><span class="s0">;</span>
+
+          <span class="s3">//Click on form that is in form called &quot;Formulário&quot; using the xpath = //a[@href='/users/new']</span>
+            <span class="s1">driver.findElement(By.xpath(</span><span class="s2">&quot;//a[@href='/users/new']&quot;</span><span class="s1">)).click()</span><span class="s0">;</span>
+
+          <span class="s3">//Fill in field called &quot;Nome&quot; that contain the ID = user_name</span>
+            <span class="s1">driver.findElement(By.id(</span><span class="s2">&quot;user_name&quot;</span><span class="s1">)).sendKeys(</span><span class="s2">&quot;Robson&quot;</span><span class="s1">)</span><span class="s0">;</span>
+
+          <span class="s3">//Fill in field called &quot;Último Nome&quot; that contain the ID = user_lastname</span>
+            <span class="s1">driver.findElement(By.id(</span><span class="s2">&quot;user_lastname&quot;</span><span class="s1">)).sendKeys(</span><span class="s2">&quot;Laurindo&quot;</span><span class="s1">)</span><span class="s0">;</span>
+
+          <span class="s3">//Fill in field called &quot;email&quot; that contain the ID = user_email</span>
+            <span class="s1">driver.findElement(By.id(</span><span class="s2">&quot;user_email&quot;</span><span class="s1">)).sendKeys(</span><span class="s2">&quot;robsonl.laurindo@gmail.com&quot;</span><span class="s1">)</span><span class="s0">;</span>
+
+          <span class="s3">//Fill in field called &quot;Endereço&quot; that contain the ID = user_address</span>
+            <span class="s1">driver.findElement(By.id(</span><span class="s2">&quot;user_address&quot;</span><span class="s1">)).sendKeys(</span><span class="s2">&quot;Rua da Constituição, 01&quot;</span><span class="s1">)</span><span class="s0">;</span>
+
+          <span class="s3">//Fill in field called &quot;Universidade&quot; that contain the ID = user_university</span>
+            <span class="s1">driver.findElement(By.id(</span><span class="s2">&quot;user_university&quot;</span><span class="s1">)).sendKeys(</span><span class="s2">&quot;Faculdade Impacta de Tecnologia&quot;</span><span class="s1">)</span><span class="s0">;</span>
+
+          <span class="s3">//Fill in field called &quot;Profissão&quot; that contain the ID = user_profile</span>
+            <span class="s1">driver.findElement(By.id(</span><span class="s2">&quot;user_profile&quot;</span><span class="s1">)).sendKeys(</span><span class="s2">&quot;QA Tester&quot;</span><span class="s1">)</span><span class="s0">;</span>
+
+          <span class="s3">//Fill in field called &quot;Gênero&quot; that contain the ID = user_gender</span>
+            <span class="s1">driver.findElement(By.id(</span><span class="s2">&quot;user_gender&quot;</span><span class="s1">)).sendKeys(</span><span class="s2">&quot;Masculino&quot;</span><span class="s1">)</span><span class="s0">;</span>
+
+          <span class="s3">//Fill in field called &quot;Idade&quot; that contain the ID = user_age</span>
+            <span class="s1">driver.findElement(By.id(</span><span class="s2">&quot;user_age&quot;</span><span class="s1">)).sendKeys(</span><span class="s2">&quot;33&quot;</span><span class="s1">)</span><span class="s0">;</span>
+
+          <span class="s3">//Click on button &quot;Criar&quot; that contain the NAME = commit</span>
+            <span class="s1">driver.findElement(By.name(</span><span class="s2">&quot;commit&quot;</span><span class="s1">)).click()</span><span class="s0">;</span>
+    <span class="s1">}</span>
+<span class="s1">}</span>
+</pre>
+</body>
+</html>
